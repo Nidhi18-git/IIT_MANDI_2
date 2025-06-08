@@ -41,10 +41,29 @@ const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID || '';
 // Protected route component
 const ProtectedRoute = ({ element, requiredRole }: { element: JSX.Element, requiredRole?: string }) => {
   const token = localStorage.getItem('token');
-  const userRole = localStorage.getItem('userRole');
-  
+  const storedUser = localStorage.getItem('user');
+  let userRole: string | undefined;
+  let parsedUser: any = null; // Add this variable to store the parsed user object
+
+  if (storedUser) {
+    try {
+      parsedUser = JSON.parse(storedUser); // Assign the parsed user object
+      userRole = parsedUser.role;
+    } catch (e) {
+      console.error("Failed to parse user data from localStorage", e);
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+    }
+  }
+
+  console.log('ProtectedRoute: token', token);
+  console.log('ProtectedRoute: storedUser', storedUser);
+  console.log('ProtectedRoute: parsedUser', parsedUser); // Log the parsed user object
+  console.log('ProtectedRoute: userRole', userRole);
+  console.log('ProtectedRoute: requiredRole', requiredRole);
+
   if (!token) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/login-student" replace />;
   }
   
   if (requiredRole && userRole !== requiredRole) {

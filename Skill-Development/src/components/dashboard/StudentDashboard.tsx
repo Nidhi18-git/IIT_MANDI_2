@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../Sidebar';
+import { useAuth } from '../../context/AuthContext';
 import './StudentDashboard.css';
 
 const courses = [
@@ -44,14 +45,14 @@ const courses = [
 
 const StudentDashboard: React.FC = () => {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
+  const { user, logout } = useAuth();
 
   const handleProfileClick = () => {
     setShowProfileMenu(!showProfileMenu);
   };
 
   const handleLogout = () => {
-    // Add logout logic here
-    console.log('Logout clicked');
+    logout();
   };
 
   return (
@@ -64,7 +65,7 @@ const StudentDashboard: React.FC = () => {
             <span className="student-header-icon"><svg width="22" height="22" fill="none"><circle cx="11" cy="11" r="10" stroke="#B0B0B0" strokeWidth="2"/><path d="M11 6V12L15 14" stroke="#B0B0B0" strokeWidth="2" strokeLinecap="round"/></svg></span>
             <span className="student-header-icon"><svg width="22" height="22" fill="none"><circle cx="11" cy="11" r="10" stroke="#B0B0B0" strokeWidth="2"/><circle cx="11" cy="11" r="4" stroke="#B0B0B0" strokeWidth="2"/></svg></span>
             <div className="profile-dropdown">
-              <span className="student-header-avatar" onClick={handleProfileClick}>AS</span>
+              <span className="student-header-avatar" onClick={handleProfileClick}>{user?.name?.charAt(0) || 'S'}</span>
               {showProfileMenu && (
                 <div className="profile-dropdown-menu">
                   <Link to="/accessibility" className="dropdown-item">Accessibility</Link>

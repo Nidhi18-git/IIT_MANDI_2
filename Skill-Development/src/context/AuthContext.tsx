@@ -92,7 +92,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       await api.auth.registerStudent({ username, email, password });
       return true;
-    } catch {
+    } catch (error: any) {
+      console.error('Student registration failed:', error.response?.data || error.message);
       return false;
     } finally {
       setIsLoading(false);
@@ -104,7 +105,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       await api.auth.registerAdmin({ username, email, password });
       return true;
-    } catch {
+    } catch (error: any) {
+      console.error('Admin registration failed:', error.response?.data || error.message);
       return false;
     } finally {
       setIsLoading(false);
@@ -118,7 +120,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setUser(response.user);
       localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
-      navigate('/student-dashboard');
+      navigate(role === 'student' ? '/student-dashboard' : '/admin-dashboard');
       return true;
     } catch {
       return false;
