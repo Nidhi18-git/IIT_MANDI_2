@@ -1,0 +1,15 @@
+/* Layout for homepage */
+.layout-root {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f7f7;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.layout-main-content {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+} 

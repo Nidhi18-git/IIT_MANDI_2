@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Test Page</h1>
+    <p>If you can see this page, static HTML serving is working.</p>
+    <p>This is a simple test page to check if the server can serve static HTML files.</p>
+    <div>
+      <button onclick="testEnvironment()">Test Environment Variables</button>
+      <div id="result" style="margin-top: 20px;"></div>
+    </div>
+  </div>
+
+  <script>
+    function testEnvironment() {
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = `
+        <p>Current time: ${new Date().toLocaleTimeString()}</p>
+        <p>Current URL: ${window.location.href}</p>
+      `;
+    }
+  </script>
+</body>
+</html> 

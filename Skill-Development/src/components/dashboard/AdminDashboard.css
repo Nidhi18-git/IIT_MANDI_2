@@ -1,0 +1,223 @@
+.admin-dashboard-bg {
+  background-color: #f5f5f5;
+  padding: 24px;
+}
+
+.admin-dashboard-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.admin-dashboard-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.admin-dashboard-header-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-header-icon {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.admin-header-icon:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.admin-header-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #234a8c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admin-header-avatar:hover {
+  background-color: #1a3a6b;
+}
+
+/* Profile Dropdown Styles */
+.profile-dropdown {
+  position: relative;
+}
+
+.profile-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* Dashboard Grid Styles */
+.admin-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.admin-dashboard-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.admin-dashboard-card:hover {
+  transform: translateY(-4px);
+}
+
+.admin-dashboard-card-icon {
+  margin-bottom: 16px;
+}
+
+.admin-dashboard-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.admin-dashboard-card-btn {
+  background: none;
+  border: none;
+  color: #234a8c;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+
+.admin-dashboard-card-btn:hover {
+  color: #1a3a6b;
+}
+
+.admin-dashboard-card-btn-arrow {
+  transition: transform 0.2s;
+}
+
+.admin-dashboard-card-btn:hover .admin-dashboard-card-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Upload Modal Styles */
+.upload-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.upload-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-modal-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.upload-modal-content h2 {
+  margin-bottom: 24px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.upload-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.upload-option {
+  width: 100%;
+}
+
+.upload-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f5f5f5;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.upload-button:hover {
+  background-color: #f0f0f0;
+  border-color: #999;
+  color: #333;
+}
+
+.close-modal {
+  width: 100%;
+  padding: 12px;
+  background-color: #234a8c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.close-modal:hover {
+  background-color: #1a3a6b;
+} 

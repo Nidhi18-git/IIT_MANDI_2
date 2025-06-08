@@ -1,0 +1,106 @@
+/* App.css - Main styling for the Skill India application */
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f7f9;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 250px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+}
+
+/* General Styling */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+/* App.css - Test styling */
+
+.test-app {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.test-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: left;
+  border: 1px solid #ddd;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* General Styling */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #0066cc;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0055aa;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+} 

@@ -1,0 +1,32 @@
+.login-btn, .register-btn {
+  width: 100%;
+  padding: 0.8rem 0;
+  background: #3a2828;
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.75rem;
+  margin-bottom: 0.85rem;
+  transition: background 0.2s;
+}
+
+.input-icon-wrapper {
+  position: relative;
+  width: 100%;
+}
+.input-icon {
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e99057;
+  font-size: 1.2rem;
+  pointer-events: none;
+  z-index: 2;
+}
+.auth-input {
+  padding-left: 3rem;
+} 
